@@ -5,7 +5,7 @@ import { RegisterVehicleDto } from './dto/register-vehicle.dto';
 import * as bcrypt from 'bcrypt';
 import { MailService } from '@/mail/mail.service';
 import { generateRandomPassword } from '@/utils/password-generator.util';
-import { PersonType, VehicleUsage } from 'generated/prisma';
+import { PersonType } from 'generated/prisma';
 
 @Injectable()
 export class VehiclesService {
@@ -75,7 +75,7 @@ export class VehiclesService {
             modele,
             dateCirculation: new Date(vehicleInfo.dateCirculation),
             carteGrise: vehicleInfo.carteGrise,
-            utilisation: vehicleInfo.utilisation as VehicleUsage,
+            utilisation: vehicleInfo.utilisation,
             preciser: vehicleInfo.preciser,
             userId: user.id,
             ownerType: ownerInfo.typePerson === 'physical' ? PersonType.PHYSICAL : PersonType.MORAL,

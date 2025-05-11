@@ -5,13 +5,6 @@ enum PersonType {
   PHYSICAL = 'physical',
   MORAL = 'moral',
 }
-
-enum VehicleUsage {
-  VTC = 'VTC',
-  TAXI = 'TAXI',
-  OTHER = 'OTHER',
-}
-
 class PhysicalPersonDto {
   @IsString()
   @IsNotEmpty()
@@ -85,9 +78,9 @@ class VehicleInfoDto {
   @IsNotEmpty()
   carteGrise: string;
 
-  @IsEnum(VehicleUsage)
+  @IsString()
   @IsNotEmpty()
-  utilisation: VehicleUsage;
+  utilisation: string;
 
   @IsString()
   @IsOptional()

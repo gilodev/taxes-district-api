@@ -13,12 +13,6 @@ enum PersonType {
   MORAL
 }
 
-enum VehicleUsage {
-  VTC
-  TAXI
-  OTHER
-}
-
 model User {
   id        String   @id @default(uuid())
   email     String   @unique
@@ -35,7 +29,7 @@ model Vehicle {
   modele          String
   dateCirculation DateTime
   carteGrise      String
-  utilisation     VehicleUsage  @default(VTC)
+  utilisation     String
   preciser        String?
   carteGriseFile  String?      
   userId          String

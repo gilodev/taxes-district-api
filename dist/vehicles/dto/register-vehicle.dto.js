@@ -17,12 +17,6 @@ var PersonType;
     PersonType["PHYSICAL"] = "physical";
     PersonType["MORAL"] = "moral";
 })(PersonType || (PersonType = {}));
-var VehicleUsage;
-(function (VehicleUsage) {
-    VehicleUsage["VTC"] = "VTC";
-    VehicleUsage["TAXI"] = "TAXI";
-    VehicleUsage["OTHER"] = "OTHER";
-})(VehicleUsage || (VehicleUsage = {}));
 class PhysicalPersonDto {
 }
 __decorate([
@@ -115,7 +109,7 @@ __decorate([
     __metadata("design:type", String)
 ], VehicleInfoDto.prototype, "carteGrise", void 0);
 __decorate([
-    (0, class_validator_1.IsEnum)(VehicleUsage),
+    (0, class_validator_1.IsString)(),
     (0, class_validator_1.IsNotEmpty)(),
     __metadata("design:type", String)
 ], VehicleInfoDto.prototype, "utilisation", void 0);

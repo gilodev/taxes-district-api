@@ -2,11 +2,6 @@ declare enum PersonType {
     PHYSICAL = "physical",
     MORAL = "moral"
 }
-declare enum VehicleUsage {
-    VTC = "VTC",
-    TAXI = "TAXI",
-    OTHER = "OTHER"
-}
 declare class PhysicalPersonDto {
     nom: string;
     prenoms: string;
@@ -31,7 +26,7 @@ declare class VehicleInfoDto {
     modele: string;
     dateCirculation: string;
     carteGrise: string;
-    utilisation: VehicleUsage;
+    utilisation: string;
     preciser?: string;
     carteGriseFile: any;
 }

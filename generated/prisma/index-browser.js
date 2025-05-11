@@ -186,12 +186,6 @@ exports.Prisma.NullsOrder = {
   first: 'first',
   last: 'last'
 };
-exports.VehicleUsage = exports.$Enums.VehicleUsage = {
-  VTC: 'VTC',
-  TAXI: 'TAXI',
-  OTHER: 'OTHER'
-};
-
 exports.PersonType = exports.$Enums.PersonType = {
   PHYSICAL: 'PHYSICAL',
   MORAL: 'MORAL'

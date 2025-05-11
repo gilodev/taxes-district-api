@@ -24,7 +24,7 @@ export declare class VehiclesController {
             modele: string;
             dateCirculation: Date;
             carteGrise: string;
-            utilisation: import("generated/prisma").$Enums.VehicleUsage;
+            utilisation: string;
             preciser: string | null;
             carteGriseFile: string | null;
             userId: string;
@@ -74,7 +74,7 @@ export declare class VehiclesController {
         modele: string;
         dateCirculation: Date;
         carteGrise: string;
-        utilisation: import("generated/prisma").$Enums.VehicleUsage;
+        utilisation: string;
         preciser: string | null;
         carteGriseFile: string | null;
         userId: string;

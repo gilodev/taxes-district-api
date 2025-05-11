@@ -45,24 +45,11 @@ export namespace $Enums {
 
 export type PersonType = (typeof PersonType)[keyof typeof PersonType]
 
-
-export const VehicleUsage: {
-  VTC: 'VTC',
-  TAXI: 'TAXI',
-  OTHER: 'OTHER'
-};
-
-export type VehicleUsage = (typeof VehicleUsage)[keyof typeof VehicleUsage]
-
 }
 
 export type PersonType = $Enums.PersonType
 
 export const PersonType: typeof $Enums.PersonType
-
-export type VehicleUsage = $Enums.VehicleUsage
-
-export const VehicleUsage: typeof $Enums.VehicleUsage
 
 /**
  * ##  Prisma Client ʲˢ
@@ -2329,7 +2316,7 @@ export namespace Prisma {
     modele: string | null
     dateCirculation: Date | null
     carteGrise: string | null
-    utilisation: $Enums.VehicleUsage | null
+    utilisation: string | null
     preciser: string | null
     carteGriseFile: string | null
     userId: string | null
@@ -2352,7 +2339,7 @@ export namespace Prisma {
     modele: string | null
     dateCirculation: Date | null
     carteGrise: string | null
-    utilisation: $Enums.VehicleUsage | null
+    utilisation: string | null
     preciser: string | null
     carteGriseFile: string | null
     userId: string | null
@@ -2542,7 +2529,7 @@ export namespace Prisma {
     modele: string
     dateCirculation: Date
     carteGrise: string
-    utilisation: $Enums.VehicleUsage
+    utilisation: string
     preciser: string | null
     carteGriseFile: string | null
     userId: string
@@ -2701,7 +2688,7 @@ export namespace Prisma {
       modele: string
       dateCirculation: Date
       carteGrise: string
-      utilisation: $Enums.VehicleUsage
+      utilisation: string
       preciser: string | null
       carteGriseFile: string | null
       userId: string
@@ -3147,7 +3134,7 @@ export namespace Prisma {
     readonly modele: FieldRef<"Vehicle", 'String'>
     readonly dateCirculation: FieldRef<"Vehicle", 'DateTime'>
     readonly carteGrise: FieldRef<"Vehicle", 'String'>
-    readonly utilisation: FieldRef<"Vehicle", 'VehicleUsage'>
+    readonly utilisation: FieldRef<"Vehicle", 'String'>
     readonly preciser: FieldRef<"Vehicle", 'String'>
     readonly carteGriseFile: FieldRef<"Vehicle", 'String'>
     readonly userId: FieldRef<"Vehicle", 'String'>
@@ -5974,20 +5961,6 @@ export namespace Prisma {
 
 
   /**
-   * Reference to a field of type 'VehicleUsage'
-   */
-  export type EnumVehicleUsageFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'VehicleUsage'>
-    
-
-
-  /**
-   * Reference to a field of type 'VehicleUsage[]'
-   */
-  export type ListEnumVehicleUsageFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'VehicleUsage[]'>
-    
-
-
-  /**
    * Reference to a field of type 'PersonType'
    */
   export type EnumPersonTypeFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'PersonType'>
@@ -6097,7 +6070,7 @@ export namespace Prisma {
     modele?: StringFilter<"Vehicle"> | string
     dateCirculation?: DateTimeFilter<"Vehicle"> | Date | string
     carteGrise?: StringFilter<"Vehicle"> | string
-    utilisation?: EnumVehicleUsageFilter<"Vehicle"> | $Enums.VehicleUsage
+    utilisation?: StringFilter<"Vehicle"> | string
     preciser?: StringNullableFilter<"Vehicle"> | string | null
     carteGriseFile?: StringNullableFilter<"Vehicle"> | string | null
     userId?: StringFilter<"Vehicle"> | string
@@ -6152,7 +6125,7 @@ export namespace Prisma {
     modele?: StringFilter<"Vehicle"> | string
     dateCirculation?: DateTimeFilter<"Vehicle"> | Date | string
     carteGrise?: StringFilter<"Vehicle"> | string
-    utilisation?: EnumVehicleUsageFilter<"Vehicle"> | $Enums.VehicleUsage
+    utilisation?: StringFilter<"Vehicle"> | string
     preciser?: StringNullableFilter<"Vehicle"> | string | null
     carteGriseFile?: StringNullableFilter<"Vehicle"> | string | null
     userId?: StringFilter<"Vehicle"> | string
@@ -6207,7 +6180,7 @@ export namespace Prisma {
     modele?: StringWithAggregatesFilter<"Vehicle"> | string
     dateCirculation?: DateTimeWithAggregatesFilter<"Vehicle"> | Date | string
     carteGrise?: StringWithAggregatesFilter<"Vehicle"> | string
-    utilisation?: EnumVehicleUsageWithAggregatesFilter<"Vehicle"> | $Enums.VehicleUsage
+    utilisation?: StringWithAggregatesFilter<"Vehicle"> | string
     preciser?: StringNullableWithAggregatesFilter<"Vehicle"> | string | null
     carteGriseFile?: StringNullableWithAggregatesFilter<"Vehicle"> | string | null
     userId?: StringWithAggregatesFilter<"Vehicle"> | string
@@ -6427,7 +6400,7 @@ export namespace Prisma {
     modele: string
     dateCirculation: Date | string
     carteGrise: string
-    utilisation?: $Enums.VehicleUsage
+    utilisation: string
     preciser?: string | null
     carteGriseFile?: string | null
     ownerType: $Enums.PersonType
@@ -6452,7 +6425,7 @@ export namespace Prisma {
     modele: string
     dateCirculation: Date | string
     carteGrise: string
-    utilisation?: $Enums.VehicleUsage
+    utilisation: string
     preciser?: string | null
     carteGriseFile?: string | null
     userId: string
@@ -6477,7 +6450,7 @@ export namespace Prisma {
     modele?: StringFieldUpdateOperationsInput | string
     dateCirculation?: DateTimeFieldUpdateOperationsInput | Date | string
     carteGrise?: StringFieldUpdateOperationsInput | string
-    utilisation?: EnumVehicleUsageFieldUpdateOperationsInput | $Enums.VehicleUsage
+    utilisation?: StringFieldUpdateOperationsInput | string
     preciser?: NullableStringFieldUpdateOperationsInput | string | null
     carteGriseFile?: NullableStringFieldUpdateOperationsInput | string | null
     ownerType?: EnumPersonTypeFieldUpdateOperationsInput | $Enums.PersonType
@@ -6502,7 +6475,7 @@ export namespace Prisma {
     modele?: StringFieldUpdateOperationsInput | string
     dateCirculation?: DateTimeFieldUpdateOperationsInput | Date | string
     carteGrise?: StringFieldUpdateOperationsInput | string
-    utilisation?: EnumVehicleUsageFieldUpdateOperationsInput | $Enums.VehicleUsage
+    utilisation?: StringFieldUpdateOperationsInput | string
     preciser?: NullableStringFieldUpdateOperationsInput | string | null
     carteGriseFile?: NullableStringFieldUpdateOperationsInput | string | null
     userId?: StringFieldUpdateOperationsInput | string
@@ -6527,7 +6500,7 @@ export namespace Prisma {
     modele: string
     dateCirculation: Date | string
     carteGrise: string
-    utilisation?: $Enums.VehicleUsage
+    utilisation: string
     preciser?: string | null
     carteGriseFile?: string | null
     userId: string
@@ -6550,7 +6523,7 @@ export namespace Prisma {
     modele?: StringFieldUpdateOperationsInput | string
     dateCirculation?: DateTimeFieldUpdateOperationsInput | Date | string
     carteGrise?: StringFieldUpdateOperationsInput | string
-    utilisation?: EnumVehicleUsageFieldUpdateOperationsInput | $Enums.VehicleUsage
+    utilisation?: StringFieldUpdateOperationsInput | string
     preciser?: NullableStringFieldUpdateOperationsInput | string | null
     carteGriseFile?: NullableStringFieldUpdateOperationsInput | string | null
     ownerType?: EnumPersonTypeFieldUpdateOperationsInput | $Enums.PersonType
@@ -6572,7 +6545,7 @@ export namespace Prisma {
     modele?: StringFieldUpdateOperationsInput | string
     dateCirculation?: DateTimeFieldUpdateOperationsInput | Date | string
     carteGrise?: StringFieldUpdateOperationsInput | string
-    utilisation?: EnumVehicleUsageFieldUpdateOperationsInput | $Enums.VehicleUsage
+    utilisation?: StringFieldUpdateOperationsInput | string
     preciser?: NullableStringFieldUpdateOperationsInput | string | null
     carteGriseFile?: NullableStringFieldUpdateOperationsInput | string | null
     userId?: StringFieldUpdateOperationsInput | string
@@ -6825,13 +6798,6 @@ export namespace Prisma {
     _max?: NestedDateTimeFilter<$PrismaModel>
   }
 
-  export type EnumVehicleUsageFilter<$PrismaModel = never> = {
-    equals?: $Enums.VehicleUsage | EnumVehicleUsageFieldRefInput<$PrismaModel>
-    in?: $Enums.VehicleUsage[] | ListEnumVehicleUsageFieldRefInput<$PrismaModel>
-    notIn?: $Enums.VehicleUsage[] | ListEnumVehicleUsageFieldRefInput<$PrismaModel>
-    not?: NestedEnumVehicleUsageFilter<$PrismaModel> | $Enums.VehicleUsage
-  }
-
   export type StringNullableFilter<$PrismaModel = never> = {
     equals?: string | StringFieldRefInput<$PrismaModel> | null
     in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
@@ -6951,16 +6917,6 @@ export namespace Prisma {
     ownerCniFile?: SortOrder
     ownerRccm?: SortOrder
     ownerRccmFile?: SortOrder
-  }
-
-  export type EnumVehicleUsageWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: $Enums.VehicleUsage | EnumVehicleUsageFieldRefInput<$PrismaModel>
-    in?: $Enums.VehicleUsage[] | ListEnumVehicleUsageFieldRefInput<$PrismaModel>
-    notIn?: $Enums.VehicleUsage[] | ListEnumVehicleUsageFieldRefInput<$PrismaModel>
-    not?: NestedEnumVehicleUsageWithAggregatesFilter<$PrismaModel> | $Enums.VehicleUsage
-    _count?: NestedIntFilter<$PrismaModel>
-    _min?: NestedEnumVehicleUsageFilter<$PrismaModel>
-    _max?: NestedEnumVehicleUsageFilter<$PrismaModel>
   }
 
   export type StringNullableWithAggregatesFilter<$PrismaModel = never> = {
@@ -7178,10 +7134,6 @@ export namespace Prisma {
     connect?: LinkedPersonWhereUniqueInput | LinkedPersonWhereUniqueInput[]
   }
 
-  export type EnumVehicleUsageFieldUpdateOperationsInput = {
-    set?: $Enums.VehicleUsage
-  }
-
   export type NullableStringFieldUpdateOperationsInput = {
     set?: string | null
   }
@@ -7357,13 +7309,6 @@ export namespace Prisma {
     _max?: NestedDateTimeFilter<$PrismaModel>
   }
 
-  export type NestedEnumVehicleUsageFilter<$PrismaModel = never> = {
-    equals?: $Enums.VehicleUsage | EnumVehicleUsageFieldRefInput<$PrismaModel>
-    in?: $Enums.VehicleUsage[] | ListEnumVehicleUsageFieldRefInput<$PrismaModel>
-    notIn?: $Enums.VehicleUsage[] | ListEnumVehicleUsageFieldRefInput<$PrismaModel>
-    not?: NestedEnumVehicleUsageFilter<$PrismaModel> | $Enums.VehicleUsage
-  }
-
   export type NestedStringNullableFilter<$PrismaModel = never> = {
     equals?: string | StringFieldRefInput<$PrismaModel> | null
     in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
@@ -7383,16 +7328,6 @@ export namespace Prisma {
     in?: $Enums.PersonType[] | ListEnumPersonTypeFieldRefInput<$PrismaModel>
     notIn?: $Enums.PersonType[] | ListEnumPersonTypeFieldRefInput<$PrismaModel>
     not?: NestedEnumPersonTypeFilter<$PrismaModel> | $Enums.PersonType
-  }
-
-  export type NestedEnumVehicleUsageWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: $Enums.VehicleUsage | EnumVehicleUsageFieldRefInput<$PrismaModel>
-    in?: $Enums.VehicleUsage[] | ListEnumVehicleUsageFieldRefInput<$PrismaModel>
-    notIn?: $Enums.VehicleUsage[] | ListEnumVehicleUsageFieldRefInput<$PrismaModel>
-    not?: NestedEnumVehicleUsageWithAggregatesFilter<$PrismaModel> | $Enums.VehicleUsage
-    _count?: NestedIntFilter<$PrismaModel>
-    _min?: NestedEnumVehicleUsageFilter<$PrismaModel>
-    _max?: NestedEnumVehicleUsageFilter<$PrismaModel>
   }
 
   export type NestedStringNullableWithAggregatesFilter<$PrismaModel = never> = {
@@ -7467,7 +7402,7 @@ export namespace Prisma {
     modele: string
     dateCirculation: Date | string
     carteGrise: string
-    utilisation?: $Enums.VehicleUsage
+    utilisation: string
     preciser?: string | null
     carteGriseFile?: string | null
     ownerType: $Enums.PersonType
@@ -7491,7 +7426,7 @@ export namespace Prisma {
     modele: string
     dateCirculation: Date | string
     carteGrise: string
-    utilisation?: $Enums.VehicleUsage
+    utilisation: string
     preciser?: string | null
     carteGriseFile?: string | null
     ownerType: $Enums.PersonType
@@ -7544,7 +7479,7 @@ export namespace Prisma {
     modele?: StringFilter<"Vehicle"> | string
     dateCirculation?: DateTimeFilter<"Vehicle"> | Date | string
     carteGrise?: StringFilter<"Vehicle"> | string
-    utilisation?: EnumVehicleUsageFilter<"Vehicle"> | $Enums.VehicleUsage
+    utilisation?: StringFilter<"Vehicle"> | string
     preciser?: StringNullableFilter<"Vehicle"> | string | null
     carteGriseFile?: StringNullableFilter<"Vehicle"> | string | null
     userId?: StringFilter<"Vehicle"> | string
@@ -7732,7 +7667,7 @@ export namespace Prisma {
     modele: string
     dateCirculation: Date | string
     carteGrise: string
-    utilisation?: $Enums.VehicleUsage
+    utilisation: string
     preciser?: string | null
     carteGriseFile?: string | null
     ownerType: $Enums.PersonType
@@ -7756,7 +7691,7 @@ export namespace Prisma {
     modele: string
     dateCirculation: Date | string
     carteGrise: string
-    utilisation?: $Enums.VehicleUsage
+    utilisation: string
     preciser?: string | null
     carteGriseFile?: string | null
     userId: string
@@ -7796,7 +7731,7 @@ export namespace Prisma {
     modele?: StringFieldUpdateOperationsInput | string
     dateCirculation?: DateTimeFieldUpdateOperationsInput | Date | string
     carteGrise?: StringFieldUpdateOperationsInput | string
-    utilisation?: EnumVehicleUsageFieldUpdateOperationsInput | $Enums.VehicleUsage
+    utilisation?: StringFieldUpdateOperationsInput | string
     preciser?: NullableStringFieldUpdateOperationsInput | string | null
     carteGriseFile?: NullableStringFieldUpdateOperationsInput | string | null
     ownerType?: EnumPersonTypeFieldUpdateOperationsInput | $Enums.PersonType
@@ -7820,7 +7755,7 @@ export namespace Prisma {
     modele?: StringFieldUpdateOperationsInput | string
     dateCirculation?: DateTimeFieldUpdateOperationsInput | Date | string
     carteGrise?: StringFieldUpdateOperationsInput | string
-    utilisation?: EnumVehicleUsageFieldUpdateOperationsInput | $Enums.VehicleUsage
+    utilisation?: StringFieldUpdateOperationsInput | string
     preciser?: NullableStringFieldUpdateOperationsInput | string | null
     carteGriseFile?: NullableStringFieldUpdateOperationsInput | string | null
     userId?: StringFieldUpdateOperationsInput | string
@@ -7844,7 +7779,7 @@ export namespace Prisma {
     modele: string
     dateCirculation: Date | string
     carteGrise: string
-    utilisation?: $Enums.VehicleUsage
+    utilisation: string
     preciser?: string | null
     carteGriseFile?: string | null
     ownerType: $Enums.PersonType
@@ -7868,7 +7803,7 @@ export namespace Prisma {
     modele: string
     dateCirculation: Date | string
     carteGrise: string
-    utilisation?: $Enums.VehicleUsage
+    utilisation: string
     preciser?: string | null
     carteGriseFile?: string | null
     userId: string
@@ -7908,7 +7843,7 @@ export namespace Prisma {
     modele?: StringFieldUpdateOperationsInput | string
     dateCirculation?: DateTimeFieldUpdateOperationsInput | Date | string
     carteGrise?: StringFieldUpdateOperationsInput | string
-    utilisation?: EnumVehicleUsageFieldUpdateOperationsInput | $Enums.VehicleUsage
+    utilisation?: StringFieldUpdateOperationsInput | string
     preciser?: NullableStringFieldUpdateOperationsInput | string | null
     carteGriseFile?: NullableStringFieldUpdateOperationsInput | string | null
     ownerType?: EnumPersonTypeFieldUpdateOperationsInput | $Enums.PersonType
@@ -7932,7 +7867,7 @@ export namespace Prisma {
     modele?: StringFieldUpdateOperationsInput | string
     dateCirculation?: DateTimeFieldUpdateOperationsInput | Date | string
     carteGrise?: StringFieldUpdateOperationsInput | string
-    utilisation?: EnumVehicleUsageFieldUpdateOperationsInput | $Enums.VehicleUsage
+    utilisation?: StringFieldUpdateOperationsInput | string
     preciser?: NullableStringFieldUpdateOperationsInput | string | null
     carteGriseFile?: NullableStringFieldUpdateOperationsInput | string | null
     userId?: StringFieldUpdateOperationsInput | string
@@ -7956,7 +7891,7 @@ export namespace Prisma {
     modele: string
     dateCirculation: Date | string
     carteGrise: string
-    utilisation?: $Enums.VehicleUsage
+    utilisation: string
     preciser?: string | null
     carteGriseFile?: string | null
     ownerType: $Enums.PersonType
@@ -7978,7 +7913,7 @@ export namespace Prisma {
     modele?: StringFieldUpdateOperationsInput | string
     dateCirculation?: DateTimeFieldUpdateOperationsInput | Date | string
     carteGrise?: StringFieldUpdateOperationsInput | string
-    utilisation?: EnumVehicleUsageFieldUpdateOperationsInput | $Enums.VehicleUsage
+    utilisation?: StringFieldUpdateOperationsInput | string
     preciser?: NullableStringFieldUpdateOperationsInput | string | null
     carteGriseFile?: NullableStringFieldUpdateOperationsInput | string | null
     ownerType?: EnumPersonTypeFieldUpdateOperationsInput | $Enums.PersonType
@@ -8002,7 +7937,7 @@ export namespace Prisma {
     modele?: StringFieldUpdateOperationsInput | string
     dateCirculation?: DateTimeFieldUpdateOperationsInput | Date | string
     carteGrise?: StringFieldUpdateOperationsInput | string
-    utilisation?: EnumVehicleUsageFieldUpdateOperationsInput | $Enums.VehicleUsage
+    utilisation?: StringFieldUpdateOperationsInput | string
     preciser?: NullableStringFieldUpdateOperationsInput | string | null
     carteGriseFile?: NullableStringFieldUpdateOperationsInput | string | null
     ownerType?: EnumPersonTypeFieldUpdateOperationsInput | $Enums.PersonType
@@ -8026,7 +7961,7 @@ export namespace Prisma {
     modele?: StringFieldUpdateOperationsInput | string
     dateCirculation?: DateTimeFieldUpdateOperationsInput | Date | string
     carteGrise?: StringFieldUpdateOperationsInput | string
-    utilisation?: EnumVehicleUsageFieldUpdateOperationsInput | $Enums.VehicleUsage
+    utilisation?: StringFieldUpdateOperationsInput | string
     preciser?: NullableStringFieldUpdateOperationsInput | string | null
     carteGriseFile?: NullableStringFieldUpdateOperationsInput | string | null
     ownerType?: EnumPersonTypeFieldUpdateOperationsInput | $Enums.PersonType
