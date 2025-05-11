@@ -1,0 +1,82 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum PersonType {
+  PHYSICAL
+  MORAL
+}
+
+enum VehicleUsage {
+  VTC
+  TAXI
+  OTHER
+}
+
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  password  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  vehicles  Vehicle[]
+}
+
+model Vehicle {
+  id              String        @id @default(uuid())
+  licensePlate    String        @unique
+  marque          String
+  modele          String
+  dateCirculation DateTime
+  carteGrise      String
+  utilisation     VehicleUsage  @default(VTC)
+  preciser        String?
+  carteGriseFile  String?      
+  userId          String
+  user            User          @relation(fields: [userId], references: [id])
+  ownerType       PersonType
+  payments        Payment[]
+  linkedPersons   LinkedPerson[]
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+
+  // Informations du propriétaire physique
+  ownerNom        String?
+  ownerPrenoms    String?
+  ownerCni        String?
+  ownerTelephone  String?
+  ownerCniFile    String?      
+
+  // Informations du propriétaire moral
+  ownerRccm       String?
+  ownerRccmFile   String?       
+}
+
+model LinkedPerson {
+  id          String   @id @default(uuid())
+  nom         String
+  role        String
+  telephone   String
+  vehicleId   String
+  vehicle     Vehicle  @relation(fields: [vehicleId], references: [id])
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Payment {
+  id           String   @id @default(uuid())
+  amount       Float
+  paymentDate  DateTime @default(now())
+  startPeriod  DateTime
+  endPeriod    DateTime
+  vehicleId    String
+  vehicle      Vehicle  @relation(fields: [vehicleId], references: [id])
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}

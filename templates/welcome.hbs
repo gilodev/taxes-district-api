@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bienvenue sur le service de paiement des taxes</title>
+    <style>
+      body {
+        font-family: 'Arial', sans-serif;
+        line-height: 1.6;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      }
+      .header {
+        background-color: #f87b23;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+      .logo {
+        max-width: 180px;
+        height: auto;
+      }
+      .content {
+        padding: 30px;
+      }
+      .vehicle-info {
+        background-color: #f2f5fa;
+        border-radius: 6px;
+        padding: 15px;
+        margin: 20px 0;
+      }
+      .credentials {
+        background-color: #e6f3ff;
+        border-left: 4px solid #2c87d4;
+        padding: 15px;
+        margin: 20px 0;
+      }
+      .button {
+        display: inline-block;
+        padding: 12px 24px;
+        background-color: #f87b23;
+        color: white;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: bold;
+        margin: 20px 0;
+      }
+      .footer {
+        text-align: center;
+        padding: 20px;
+        font-size: 0.9em;
+        color: #666;
+        background-color: #f2f5fa;
+      }
+      .divider {
+        border-top: 1px solid #eaeaea;
+        margin: 20px 0;
+      }
+      .text-center {
+        text-align: center;
+      }
+      h1 {
+        color: #2c87d4;
+        margin-bottom: 20px;
+      }
+      .district-logo {
+        max-width: 200px;
+        height: auto;
+        margin: 15px auto;
+      }
+      .info-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 8px;
+      }
+      .info-label {
+        font-weight: bold;
+        color: #555;
+      }
+      .info-value {
+        color: #333;
+      }
+      .warning {
+        color: #d14836;
+        font-size: 0.9em;
+        margin-top: 15px;
+      }
+      .social-links {
+        margin-top: 15px;
+      }
+      .social-link {
+        display: inline-block;
+        margin: 0 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+          <img src="cid:logo" alt="District Autonome d'Abidjan" class="district-logo" />
+        <h2>Service de Paiement des Taxes</h2>
+      </div>
+      <div class="content">
+        <h1>Bienvenue sur la plateforme de paiement des taxes</h1>
+        <p>Votre compte a été créé avec succès pour le service de paiement des taxes du District Autonome d'Abidjan.</p>
+        
+        <div class="vehicle-info">
+          <h3>Informations du véhicule</h3>
+          <div class="info-row">
+            <span class="info-label">Immatriculation: </span>
+            <span class="info-value">{{licensePlate}}</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Marque: </span>
+            <span class="info-value">{{marque}}</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Modèle: </span>
+            <span class="info-value">{{modele}}</span>
+          </div>
+        </div>
+
+        <div class="credentials">
+          <h3>Vos identifiants de connexion</h3>
+          <div class="info-row">
+            <span class="info-label">Email: </span>
+            <span class="info-value">{{email}}</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Mot de passe temporaire: </span>
+            <span class="info-value">{{password}}</span>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <a href="https://taxes.district.ci" class="button">Se connecter maintenant</a>
+        </div>
+
+        <div class="divider"></div>
+
+        <p>Pour toute question ou assistance, n'hésitez pas à contacter notre service client à l'adresse: <strong>support@taxes-district.ci</strong></p>
+      </div>
+      <div class="footer">
+        <p>District Autonome d'Abidjan &copy; 2025 - Tous droits réservés</p>
+        <p>Cet email a été envoyé automatiquement. Merci de ne pas y répondre.</p>
+        <div class="social-links">
+          <a href="#" class="social-link">Facebook</a> |
+          <a href="#" class="social-link">Twitter</a> |
+          <a href="#" class="social-link">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

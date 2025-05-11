@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Confirmation de paiement des taxes</title>
+    <style>
+      body {
+        font-family: 'Arial', sans-serif;
+        line-height: 1.6;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      }
+      .header {
+        background-color: #f87b23;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+      .logo-container {
+        margin-bottom: 10px;
+      }
+      .content {
+        padding: 30px;
+      }
+      .success-banner {
+        background-color: #dff2e6;
+        border-left: 4px solid #28a745;
+        padding: 15px;
+        margin: 20px 0;
+      }
+      .payment-details {
+        background-color: #f2f5fa;
+        border-radius: 6px;
+        padding: 20px;
+        margin: 20px 0;
+      }
+      .button {
+        display: inline-block;
+        padding: 12px 24px;
+        background-color: #2c87d4;
+        color: white;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: bold;
+        margin: 20px 0;
+      }
+      .footer {
+        text-align: center;
+        padding: 20px;
+        font-size: 0.9em;
+        color: #666;
+        background-color: #f2f5fa;
+      }
+      .divider {
+        border-top: 1px solid #eaeaea;
+        margin: 20px 0;
+      }
+      .text-center {
+        text-align: center;
+      }
+      h1 {
+        color: #2c87d4;
+        margin-bottom: 20px;
+      }
+      .district-logo {
+        max-width: 200px;
+        height: auto;
+        margin: 15px auto;
+      }
+      .info-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 12px;
+      }
+      .info-label {
+        font-weight: bold;
+        color: #555;
+      }
+      .info-value {
+        color: #333;
+      }
+      .amount {
+        font-size: 24px;
+        font-weight: bold;
+        color: #28a745;
+      }
+      .period-badge {
+        display: inline-block;
+        background-color: #e9f3ff;
+        padding: 5px 10px;
+        border-radius: 20px;
+        font-size: 0.9em;
+        color: #2c87d4;
+      }
+      .social-links {
+        margin-top: 15px;
+      }
+      .social-link {
+        display: inline-block;
+        margin: 0 5px;
+      }
+      .reference {
+        font-family: monospace;
+        background-color: #f8f8f8;
+        padding: 5px 10px;
+        border-radius: 4px;
+        border: 1px dashed #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+          <img src="cid:logo" alt="District Autonome d'Abidjan" class="district-logo" />
+        <h2>Service de Paiement des Taxes</h2>
+      </div>
+      <div class="content">
+        <div class="success-banner">
+          <h3 style="margin-top: 0; color: #28a745;">✓ Paiement effectué avec succès</h3>
+          <p style="margin-bottom: 0;">Votre paiement a été traité et enregistré dans notre système.</p>
+        </div>
+
+        <h1>Confirmation de Paiement</h1>
+        <p>Nous vous confirmons que votre paiement de taxe pour le véhicule immatriculé <strong>{{licensePlate}}</strong> a été effectué avec succès.</p>
+
+        <div class="payment-details">
+          <div class="info-row">
+            <span class="info-label">N° de référence: </span>
+            <span class="info-value">TX-{{startYear}}-{{licensePlate}}</span>
+          </div>
+          <div class="divider"></div>
+          <div class="info-row">
+            <span class="info-label">Période: </span>
+            <span class="info-value">{{startMonth}} {{startYear}} - {{endMonth}} {{endYear}}</span>
+          </div>
+          <div class="divider"></div>
+          <div class="info-row">
+            <span class="info-label">Montant: </span>
+            <span class="info-value">{{amount}} FCFA</span>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <a href="https://taxes.district.ci/recu?ref=TX-{{startYear}}-{{licensePlate}}" class="button">Télécharger le reçu</a>
+        </div>
+
+        <div class="divider"></div>
+
+        <p>Pour toute question concernant votre paiement, n'hésitez pas à contacter notre service client à l'adresse: <strong>support@taxes-district.ci</strong></p>
+        
+        <p>Merci d'utiliser notre service de paiement des taxes en ligne.</p>
+      </div>
+      <div class="footer">
+        <p>District Autonome d'Abidjan &copy; 2025 - Tous droits réservés</p>
+        <p>Cet email a été envoyé automatiquement. Merci de ne pas y répondre.</p>
+        <div class="social-links">
+          <a href="#" class="social-link">Facebook</a> |
+          <a href="#" class="social-link">Twitter</a> |
+          <a href="#" class="social-link">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
