@@ -1,8 +1,7 @@
-<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset='utf-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <title>Confirmation de paiement des taxes</title>
     <style>
       body {
@@ -120,54 +119,71 @@
     </style>
   </head>
   <body>
-    <div class="container">
-      <div class="header">
-          <img src="cid:logo" alt="District Autonome d'Abidjan" class="district-logo" />
+    <div class='container'>
+      <div class='header'>
+        <img
+          src='cid:logo'
+          alt="District Autonome d'Abidjan"
+          class='district-logo'
+        />
         <h2>Service de Paiement des Taxes</h2>
       </div>
-      <div class="content">
-        <div class="success-banner">
-          <h3 style="margin-top: 0; color: #28a745;">✓ Paiement effectué avec succès</h3>
-          <p style="margin-bottom: 0;">Votre paiement a été traité et enregistré dans notre système.</p>
+      <div class='content'>
+        <div class='success-banner'>
+          <h3 style='margin-top: 0; color: #28a745;'>✓ Paiement effectué avec
+            succès</h3>
+          <p style='margin-bottom: 0;'>Votre paiement a été traité et enregistré
+            dans notre système.</p>
         </div>
 
         <h1>Confirmation de Paiement</h1>
-        <p>Nous vous confirmons que votre paiement de taxe pour le véhicule immatriculé <strong>{{licensePlate}}</strong> a été effectué avec succès.</p>
+        <p>Nous vous confirmons que votre paiement de taxe pour le véhicule
+          immatriculé
+          <strong>{{licensePlate}}</strong>
+          a été effectué avec succès.</p>
 
-        <div class="payment-details">
-          <div class="info-row">
-            <span class="info-label">N° de référence: </span>
-            <span class="info-value">TX-{{startYear}}-{{licensePlate}}</span>
+        <div class='payment-details'>
+          <div class='info-row'>
+            <span class='info-label'>N° de référence: </span>
+            <span class='info-value'>TX-{{startYear}}-{{licensePlate}}</span>
           </div>
-          <div class="divider"></div>
-          <div class="info-row">
-            <span class="info-label">Période: </span>
-            <span class="info-value">{{startMonth}} {{startYear}} - {{endMonth}} {{endYear}}</span>
+          <div class='divider'></div>
+          <div class='info-row'>
+            <span class='info-label'>Période: </span>
+            <span class='info-value'>{{startMonth}}
+              {{startYear}}
+              -
+              {{endMonth}}
+              {{endYear}}</span>
           </div>
-          <div class="divider"></div>
-          <div class="info-row">
-            <span class="info-label">Montant: </span>
-            <span class="info-value">{{amount}} FCFA</span>
+          <div class='divider'></div>
+          <div class='info-row'>
+            <span class='info-label'>Montant: </span>
+            <span class='info-value'>{{amount}} FCFA</span>
           </div>
         </div>
 
-        <div class="text-center">
-          <a href="https://taxes.district.ci/recu?ref=TX-{{startYear}}-{{licensePlate}}" class="button">Télécharger le reçu</a>
+        <div class='text-center'>
+          <a href='#' class='button'>Télécharger le reçu</a>
         </div>
 
-        <div class="divider"></div>
+        <div class='divider'></div>
 
-        <p>Pour toute question concernant votre paiement, n'hésitez pas à contacter notre service client à l'adresse: <strong>support@taxes-district.ci</strong></p>
-        
+        <p>Pour toute question concernant votre paiement, n'hésitez pas à
+          contacter notre service client à l'adresse:
+          <strong>support@taxes-district.ci</strong></p>
+
         <p>Merci d'utiliser notre service de paiement des taxes en ligne.</p>
       </div>
-      <div class="footer">
+      <div class='footer'>
         <p>District Autonome d'Abidjan &copy; 2025 - Tous droits réservés</p>
         <p>Cet email a été envoyé automatiquement. Merci de ne pas y répondre.</p>
-        <div class="social-links">
-          <a href="#" class="social-link">Facebook</a> |
-          <a href="#" class="social-link">Twitter</a> |
-          <a href="#" class="social-link">Instagram</a>
+        <div class='social-links'>
+          <a href='#' class='social-link'>Facebook</a>
+          |
+          <a href='#' class='social-link'>Twitter</a>
+          |
+          <a href='#' class='social-link'>Instagram</a>
         </div>
       </div>
     </div>
